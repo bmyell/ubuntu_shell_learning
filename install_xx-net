@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Program 
+#   自动安装 下载 xx-net 并且 安装所依赖软件
+#    
+cd ~
+mkdir xx-net 
+cd xx-net 
+git clone https://github.com/XX-net/XX-Net.git
+
+sudo apt-get install python-OpenSSL
+sudo apt-get install libffi-dev
+sudo apt-get install -y python-gtk2
+sudo apt-get install python-appindicator
+sudo apt-get install libnss3-tools
