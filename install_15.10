@@ -1,0 +1,133 @@
+#!/bin/bash
+# Building date
+#   2016.5.02
+# 
+# Program 
+#    可以自动把 ubuntu 15.10  基本功能配置好, 
+#    在每个命令执行前都有相应的注释,可以根据个人需要 删除 或者 增加
+#          
+#
+#Call me maybe
+#     https://github.com/bmyell --github
+#     1812630796                --QQ
+#        
+#
+# History
+#     2016.05.02  version 1.0  删除一些基本的软件，安装几个基本软件。
+#   		               想要实现 可以 自动 添加源 的功能 还有 
+#   		               在 安装 或者 删除 的时候 可以不提示 确认信息 
+#
+
+echo ""
+echo " ************************************************** "
+echo "                        声明                        "
+echo "                                                    "
+echo "                                                    "
+echo "       修改后供 ubuntu 爱好者 参考/学习/开发使用    "
+echo "                                                    "
+echo "                 安装环境 ubuntu  各种版本          "
+echo "                                                    "
+echo "       	作     者 ： 刘知磊                       "
+echo "       	时     间 ： 2016.05.02                   "
+echo "                                                    "
+echo " ************************************************** "
+echo -e "\n\n\n\n"
+sleep 3
+
+
+#更新源
+sudo apt-get update
+echo -e "\n\n\n"
+echo " ************************************************** "
+echo "                                                    "
+echo "              Ubuntu14.10更新源完毕                 "
+echo "            两秒钟之后开始安装平台支持库             "
+echo "                                                    "
+echo " ************************************************** "
+echo -e "\n\n\n"
+sleep 3 
+
+
+# libreoffice虽然是开源的，但是Java写出来的office执行效率实在不敢恭维，
+#  装完系统后果断删掉
+
+echo -e "\n\n\n"
+echo "                准备删除 libreoffice ...              "
+sudo apt-get remove libreoffice-common -y
+echo "                已经删除 libreoffice 。。。           "
+echo -e "\n\n\n"
+sleep 3
+
+# 删除Amazon的链接
+
+echo -e "\n\n\n"
+echo "                准备删除 Amazon的链接 ...              "
+sudo apt-get remove unity-webapps-common
+echo "                已经删除 Amazon的链接 。。。           "
+echo -e "\n\n\n"
+sleep 3
+
+# 删掉基本不用的自带软件（用的时候再装也来得及）
+
+echo -e "\n\n\n"
+echo "                准备删除 非常用软件 ...              "
+sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install  
+
+sudo apt-get remove onboard deja-dup  
+echo "                已经删除 非常用软件 。。。                "
+echo -e "\n\n\n"
+sleep 3
+
+#安装WPS Office
+echo -e "\n\n\n"
+echo "                准备安装 WPS Office ...              "
+sudo apt-get install wps-office   
+echo "                已经安装 WPS Office 。。。                 "
+echo -e "\n\n\n"
+sleep 3
+
+
+#安装 cmake
+echo -e "\n\n\n"
+echo "                准备安装 cmake ...              "
+sudo apt-get install cmake  
+echo "                已经安装 cmake。。。                 "
+echo -e "\n\n\n"
+sleep 3
+
+
+
+#安装 Qt Creator
+echo -e "\n\n\n"
+echo "                准备安装 Qt Creator ...              "
+sudo apt-get install qtcreator    
+echo "                已经安装 Qt Creator。。。                 "
+echo -e "\n\n\n"
+sleep 3
+
+
+
+# 安装ExFat文件系统驱动 
+#Ubuntu默认不支持exFat文件系统的挂载，需要手动安装exfat的支持
+echo -e "\n\n\n"
+echo "                准备安装 ExFat文件系统驱动 . . .                 "
+sudo apt-get install exfat-fuse     
+echo "                已经安装 ExFat文件系统驱动 。。。                 "
+echo -e "\n\n\n"
+sleep 3
+
+
+#安装 unrar
+#系统默认不带解压缩rar文件的功能，手动安装unrar程序
+echo -e "\n\n\n"
+echo "                准备安装 unrar                       "
+echo "                已经安装 unrar 。。。                 "
+echo -e "\n\n\n"
+sleep 3
+
+
+
+
+
+
+
