@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+
+#Program 
+#   自动安装 chrome 浏览器
+#    
+
+
+echo -e "          准备安装chrome 浏览器 \n\n"
+sleep 3
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo apt-get -f install
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+rm *.deb
+
+
