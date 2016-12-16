@@ -78,13 +78,6 @@ echo "                已经删除 非常用软件 。。。                "
 echo -e "\n\n\n"
 sleep 3
 
-#安装WPS Office
-echo -e "\n\n\n"
-echo "                准备安装 WPS Office ...              "
-sudo apt-get install wps-office   
-echo "                已经安装 WPS Office 。。。                 "
-echo -e "\n\n\n"
-sleep 3
 
 
 #安装 cmake
@@ -97,13 +90,6 @@ sleep 3
 
 
 
-#安装 Qt Creator
-echo -e "\n\n\n"
-echo "                准备安装 Qt Creator ...              "
-sudo apt-get install qtcreator    
-echo "                已经安装 Qt Creator。。。                 "
-echo -e "\n\n\n"
-sleep 3
 
 
 
@@ -125,7 +111,75 @@ echo "                已经安装 unrar 。。。                 "
 echo -e "\n\n\n"
 sleep 3
 
+#Program
+#提高电池的寿命并且减少过热
+#笔记本过热是一个普遍的问题，它不仅仅存在于ubuntu中，也存在与其他的操作系统#中，过热会影响电池的寿命，从 ubuntu12.10开始，tupiter就是解决过热的最好的#工具。可惜的是这个项目已经停止开发了，你可以使用TLP或者CPUFREQ来代替 #jupiter,安装TLP通过使用下面的命令  
+#作者：周小明
+#链接：http://www.zhihu.com/question/20509148/answer/25647671
+#来源：知乎
+#著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
+sudo add-apt-repository ppa:linrunner/tlp  -y
+sudo apt-get update
+sudo apt-get install tlp tlp-rdw  -y
+sudo tlp start  
+#使用TPL是不需要进行配置的。
+
+#安装doxygen为了后面对agent代码生成uml视图
+echo "安装doxygen 和 graphviz" -n
+sudo apt-get install doxygen -y
+#安装 graphhviz
+sudo apt-get install graphviz -y
+
+
+#Program 
+#   改变主要 文件名 为英文名
+#  
+echo "change dir_name to English"
+export LANG=en_US
+xdg-user-dirs-gtk-update
+echo "change dir_name to English done"
+
+#Program 
+#   自动安装 chrome 浏览器
+#    
+
+
+echo -e "          准备安装chrome 浏览器 \n\n"
+sleep 3
+
+
+echo -e "          下载源加入到系统的源列表\n\n"
+sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/
+
+echo -e "          导入谷歌软件的公钥\n\n"
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+
+sudo apt-get -f update
+sudo apt-get install google-chrome-stable -y
+
+##TODO
+#
+#
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+
+
+
+#
+echo -e "             git install ......"
+sudo apt-get install git -y
+
+
+#
+echo -e "             vim install  ......"
+
+wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
+
+
+#在这里加入对已安装软件的测试，之后如果没有安装成功就一直安装
+#比如如果chrome没有安装的话，就不删除Firefox
 
 
 

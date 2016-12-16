@@ -1,9 +1,0 @@
-#!/bin/bash
-
-#Program 
-#   改变主要 文件名 为英文名
-#  
-echo "change dir_name to English"
-export LANG=en_US
-xdg-user-dirs-gtk-update
-echo "change dir_name to English Done!"
