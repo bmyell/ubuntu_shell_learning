@@ -183,5 +183,6 @@ wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
 
 
 
-
-
+#安装matplotlib
+echo -e "             python-matplotlib installed"
+sudo apt-get install python-matplotlib
