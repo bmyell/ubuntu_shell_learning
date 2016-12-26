@@ -1,2 +1,8 @@
 # ubuntu_shell_learning
-ubuntu下的shell学习，提供 优化ubuntu 使用的 优质 shell scripts 
+## ubuntu下的shell的一些优化脚本 
+### cantlink_net.sh
+    在这个脚本里面主要是对于Ubuntu本身的dns系统不完善,无发应对校园网dns爆炸的情况
+### install  install_xx-net
+    xx-net 
+### install_ubuntu.sh 
+   这个里面主要是Ubuntu的一些优化,可以查看内容之后再做修改.
