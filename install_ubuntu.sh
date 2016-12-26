@@ -62,7 +62,7 @@ sleep 3
 
 echo -e "\n\n\n"
 echo "                准备删除 Amazon的链接 ...              "
-sudo apt-get remove unity-webapps-common
+sudo apt-get remove unity-webapps-common -y
 echo "                已经删除 Amazon的链接 。。。           "
 echo -e "\n\n\n"
 sleep 3
@@ -71,9 +71,8 @@ sleep 3
 
 echo -e "\n\n\n"
 echo "                准备删除 非常用软件 ...              "
-sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install  
-
-sudo apt-get remove onboard deja-dup  
+sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install -y
+sudo apt-get remove onboard deja-dup  -y
 echo "                已经删除 非常用软件 。。。                "
 echo -e "\n\n\n"
 sleep 3
@@ -83,7 +82,7 @@ sleep 3
 #安装 cmake
 echo -e "\n\n\n"
 echo "                准备安装 cmake ...              "
-sudo apt-get install cmake  
+sudo apt-get install cmake  -y
 echo "                已经安装 cmake。。。                 "
 echo -e "\n\n\n"
 sleep 3
@@ -97,7 +96,7 @@ sleep 3
 #Ubuntu默认不支持exFat文件系统的挂载，需要手动安装exfat的支持
 echo -e "\n\n\n"
 echo "                准备安装 ExFat文件系统驱动 . . .                 "
-sudo apt-get install exfat-fuse     
+sudo apt-get install exfat-fuse  -y   
 echo "                已经安装 ExFat文件系统驱动 。。。                 "
 echo -e "\n\n\n"
 sleep 3
@@ -161,9 +160,9 @@ sudo apt-get install google-chrome-stable -y
 ##TODO
 #
 #
-sudo add-apt-repository ppa:hzwhuang/ss-qt5
-sudo apt-get update
-sudo apt-get install shadowsocks-qt5
+sudo add-apt-repository ppa:hzwhuang/ss-qt5 -y
+sudo apt-get update 
+sudo apt-get install shadowsocks-qt5 -y
 
 
 
@@ -185,4 +184,5 @@ wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
 
 #安装matplotlib
 echo -e "             python-matplotlib installed"
-sudo apt-get install python-matplotlib
+sudo apt-get install python-matplotlib -y
+
