@@ -172,7 +172,7 @@ sudo apt-get install git -y
 
 
 
-#安装matplotlib
+#install matplotlib
 echo -e "             python-matplotlib installed"
 sudo apt-get install python-matplotlib -y
 
@@ -182,6 +182,13 @@ sudo apt-get update
 sudo apt-get install libopencc1 -y
 sudo apt-get install fcitx-libs -y
 sudo apt-get install fcitx-libs-qt -y
+
+#install indicator-sysmonitor
+sudo apt-get install python3-psutil curl git gir1.2-appindicator3-0.1
+git clone https://github.com/fossfreedom/indicator-sysmonitor.git
+cd indicator-sysmonitor
+sudo make install
+nohup indicator-sysmonitor &
 
 
 #vim install
