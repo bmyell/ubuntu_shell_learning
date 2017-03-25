@@ -191,6 +191,9 @@ sudo make install
 nohup indicator-sysmonitor &
 
 
+#install mplayer
+sudo apt-get install mplayer
+
 #vim install
 echo -e "             vim install  ......"
 
