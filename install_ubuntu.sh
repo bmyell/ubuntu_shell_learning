@@ -40,7 +40,7 @@ sudo apt-get update
 echo -e "\n\n\n"
 echo " ************************************************** "
 echo "                                                    "
-echo "              Ubuntu14.10更新源完毕                 "
+echo "              Ubuntu16.04更新源完毕                 "
 echo "            两秒钟之后开始安装平台支持库             "
 echo "                                                    "
 echo " ************************************************** "
@@ -112,12 +112,6 @@ sleep 3
 
 #Program
 #提高电池的寿命并且减少过热
-#笔记本过热是一个普遍的问题，它不仅仅存在于ubuntu中，也存在与其他的操作系统#中，过热会影响电池的寿命，从 ubuntu12.10开始，tupiter就是解决过热的最好的#工具。可惜的是这个项目已经停止开发了，你可以使用TLP或者CPUFREQ来代替 #jupiter,安装TLP通过使用下面的命令  
-#作者：周小明
-#链接：http://www.zhihu.com/question/20509148/answer/25647671
-#来源：知乎
-#著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 sudo add-apt-repository ppa:linrunner/tlp  -y
 sudo apt-get update
 sudo apt-get install tlp tlp-rdw  -y
@@ -157,8 +151,7 @@ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key a
 sudo apt-get -f update
 sudo apt-get install google-chrome-stable -y
 
-##TODO
-#
+# linux ss-qt5 -y
 #
 sudo add-apt-repository ppa:hzwhuang/ss-qt5 -y
 sudo apt-get update 
@@ -166,15 +159,12 @@ sudo apt-get install shadowsocks-qt5 -y
 
 
 
-#
+#git install
 echo -e "             git install ......"
 sudo apt-get install git -y
 
 
-#
-echo -e "             vim install  ......"
 
-wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
 
 
 #在这里加入对已安装软件的测试，之后如果没有安装成功就一直安装
@@ -186,3 +176,15 @@ wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
 echo -e "             python-matplotlib installed"
 sudo apt-get install python-matplotlib -y
 
+#add sougou ppa
+sudo add-apt-repository ppa:fcitx-team/nightly -y
+sudo apt-get update
+sudo apt-get install libopencc1 -y
+sudo apt-get install fcitx-libs -y
+sudo apt-get install fcitx-libs-qt -y
+
+
+#vim install
+echo -e "             vim install  ......"
+
+wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
