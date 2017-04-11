@@ -194,7 +194,14 @@ nohup indicator-sysmonitor &
 #install mplayer
 sudo apt-get install mplayer
 
+# install fonts for wps
+unzip *.zip
+cd ./wps_symbol_fonts/ 
+sudo cp * /usr/share/fonts/
+sudo mkfontscale
+sudo mkfontdir
+sudo fc-cache
 #vim install
-echo -e "             vim install  ......"
+echo -e "   mZ         vim install  ......"
 
 wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
