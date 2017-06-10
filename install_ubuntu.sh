@@ -148,7 +148,7 @@ sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.li
 echo -e "          导入谷歌软件的公钥\n\n"
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
 
-sudo apt-get -f update
+sudo apt-get  update
 sudo apt-get install google-chrome-stable -y
 
 # linux ss-qt5 -y
