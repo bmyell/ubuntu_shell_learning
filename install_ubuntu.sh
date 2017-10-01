@@ -197,6 +197,7 @@ sudo cp * /usr/share/fonts/
 sudo mkfontscale
 sudo mkfontdir
 sudo fc-cache
+rm -rf fonts/
 #vim install
 echo -e "   mZ         vim install  ......"
 
