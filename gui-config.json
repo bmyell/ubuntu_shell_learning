@@ -1,0 +1,13 @@
+{
+    "configs": [
+        {
+            "method": "aes-256-cfb",
+            "password": "19960514",
+            "remarks": "ss",
+            "server": "169.44.126.240",
+            "server_port": 51496
+        }
+    ],
+    "localPort": 1080,
+    "shareOverLan": false
+}
