@@ -195,8 +195,7 @@ nohup indicator-sysmonitor &
 sudo apt-get install mplayer
 
 #install the pip 
-python get_pip.py
-
+sudo python get-pip.py
 # install fonts for wps
 unzip *.zip
 cd ./wps_symbol_fonts/ 
