@@ -25,10 +25,10 @@ echo "                                                    "
 echo "                                                    "
 echo "       修改后供 ubuntu 爱好者 参考/学习/开发使用    "
 echo "                                                    "
-echo "                 安装环境 ubuntu  各种版本          "
+echo "                 安装环境 ubuntu  any version         "
 echo "                                                    "
-echo "       	作     者 ： 刘知磊                       "
-echo "       	时     间 ： 2016.05.02                   "
+echo "       	Author   ： Liu zhilei                     "
+echo "       	Time     ： 2016.05.02                     "
 echo "                                                    "
 echo " ************************************************** "
 echo -e "\n\n\n\n"
@@ -88,10 +88,6 @@ echo -e "\n\n\n"
 sleep 3
 
 
-
-
-
-
 # 安装ExFat文件系统驱动 
 #Ubuntu默认不支持exFat文件系统的挂载，需要手动安装exfat的支持
 echo -e "\n\n\n"
@@ -140,8 +136,6 @@ echo "change dir_name to English done"
 
 echo -e "          准备安装chrome 浏览器 \n\n"
 sleep 3
-
-
 echo -e "          下载源加入到系统的源列表\n\n"
 sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/
 
@@ -197,8 +191,8 @@ sudo apt-get install mplayer
 #install the pip 
 sudo python get-pip.py
 # install fonts for wps
-unzip *.zip
-cd ./wps_symbol_fonts/ 
+unzip *.zip -d fonts
+cd ./fonts/ 
 sudo cp * /usr/share/fonts/
 sudo mkfontscale
 sudo mkfontdir
