@@ -157,8 +157,8 @@ sudo apt-get install shadowsocks-qt5 -y
 echo -e "             git install ......"
 sudo apt-get install git -y
 
-
-
+#关闭utc否则ubuntu和windows会有时差而且时间不对
+sudo timedatectl set-local-rtc 1
 
 
 #在这里加入对已安装软件的测试，之后如果没有安装成功就一直安装
